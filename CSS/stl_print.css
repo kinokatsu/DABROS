@@ -1,0 +1,28 @@
+/*水位観測情報 グラフページ 印刷用*/
+:root{
+--Longitudinal:185mm ;      /*172*/
+--Horizontal:251mm;
+}
+    
+
+
+.print_pages_port{
+/*A4縦*/
+width: var(--Longitudinal);       /*172*/
+height: var(--Holizontal);
+page-break-after: always;
+}
+/*最後のページは改ページを入れない*/
+.print_pages_port:last-child{
+page-break-after: auto;
+}
+.print_pages_land{
+/*A4縦*/
+height: var(--Longitudinal);
+width: var(--Holizontal);
+page-break-after: always;
+}
+/*最後のページは改ページを入れない*/
+.print_pages_land:last-child{
+page-break-after: auto;
+}

@@ -1,0 +1,572 @@
+﻿/*水位観測情報 グラフページ用*/
+body {
+	font-size: 10pt;
+	direction: ltr;
+	background-color: white;
+	text-decoration: none;
+	margin-bottom:10;
+	background-color: #e6e6e6;
+	/*outline: solid 1px;*/
+	/*margin-top: 15;*/
+	/*margin-right: 10;*/
+	/*margin-left: 10;*/
+	/*margin: auto;*/
+	font-family:'メイリオ',
+				'Meiryo',
+				'Hiragino Kaku Gothic Pro',
+				'ヒラギノ角ゴ Pro W3',
+				'Osaka',
+				'ＭＳ Ｐゴシック',
+				sans-serif;
+}
+/* IE8+, Chrome */
+input, button, image {
+  outline: 0;
+}
+/* Firefox */
+input::-moz-focus-inner, button::-moz-focus-inner {
+  border: 0;
+}
+div{
+	outline: none 0px;
+	/*margin:auto;*/
+}
+/* 印刷しないコントロール */
+@media print {
+	.noprint {visibility:hidden;}
+	.dspOnly {display:none;}
+}
+.lblUpdate {
+	border:2px Ridge;
+	Font-Size:10pt;
+	Width:650px;
+	display:block;
+	margin:auto;
+	margin-top: 5px;
+	text-align:right;
+	Background-Color:#C0FFC0;
+}
+/*.GraphOuterLandscape {
+	/*横置き
+	height:180mm;		600px;
+	width:98%;
+	background-color:white;
+	margin: auto auto auto auto;
+	padding: 10px 2px 8px 2px;
+}*/
+.GraphOuterPortrait {
+	/*縦置き*/
+	/*height:auto;
+	min-width:400px;*/
+	/*width:auto;*/
+	background-color:white;
+	padding: 2px 2px 2px 2px;
+}
+.BoxShadow{
+	box-shadow: 0 0 15px rgba(0,0,0,.3);
+}
+.MarginAuto{
+	margin: 10px 0px 10px 0px;
+}
+.ConUpper {
+	width: 100%;
+	height: 300px;      /* graphConteiner も一緒に変更する必要がある*/
+}
+.graphConteiner {
+	height: 300px;
+}
+.con_common {
+	margin: 0px;
+	padding: 0px;
+	width:50%;
+	height: 100%;
+	/*height: 400px;*/
+	/*overflow-y: visible;*/
+	/*border:1px solid brown;*/
+}
+.con_left {
+	float:left;
+}
+.con_right {
+	float:left;
+}
+.float_Clear {
+	clear:left;
+}
+.condTable {
+	width:100%;
+	font-size: 10pt;
+	padding:30px 15px 5px 10px;
+	border-spacing:3px;	
+}
+.cond_Top {
+	background: #eeffee
+}
+.cond_col1 {
+	background:#f0f0ff;	
+	padding:1px 3px 1px 3px;
+	width:40%;
+}
+.cond_col2 {
+	width:60%;
+}
+
+/*基本*/
+.BASICSET{
+	font-size: 10pt;
+	direction: ltr;
+	/*font-family: 'MS UI Gothic';*/
+}
+/* グラデーションのテキストボックス */
+.TEXTBOXES {
+	font-size: 10pt;
+	font-family: 'MS UI Gothic';
+	TEXT-ALIGN: center;
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=PowderBlue, endcolorstr=white, gradienttype=1);
+	/*ime-mode:disabled;*/
+	border-style:inset;
+	height:14px;
+}
+.BTNHEADER_PRINT {
+	margin-left:60px;
+	margin-right:10px;
+	padding-top: 4px;
+	border-style:none;	
+}
+.BTNHEADER_REDRAW {
+	margin-left:350px;
+	margin-right:15px;
+	padding-top: 4px;
+	border-style:none;	
+}
+.BTNHEADER_CLOSE {
+	padding-top: 4px;
+	border-style:none;
+}
+.pnlButtons{
+	background-color:Cornsilk;
+	border:2px Ridge Olive;
+	font-size:2px;
+	text-align:left;
+	Height:37px;
+	Width:650px;
+}
+.accordionHeader {
+	border: 2px solid #2F4F4F;
+	color:White;
+	Width:650px;
+	background-color:#2E4F7B;
+	font-size:13pt;
+	font-weight:600;
+	padding:2px 0px 2px 0px;
+	margin-top:5px;
+	vertical-align:middle;
+	cursor:pointer;
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#ff0F99DD,endColorStr=#ff0807BB,gradientType=0);
+	TEXT-ALIGN:left;
+	background-image: url(../img/TblGradNote.png);
+	background-repeat:repeat-x;
+	background-position: left top;
+}
+.collapsePanel {
+	/*width:654px;*/
+	height:0px;
+	overflow:hidden;
+	background-color:Transparent;
+	border-style:none;
+	/*text-align:center;*/
+}
+.noaccordionHeader {
+	/*border: 1px solid #2F4F4F;*/
+	color:White;
+	/*background-color:#2E4F7B;*/
+	/*font-family:MS UI Gothic;*/
+	font-size:13pt;
+	font-weight:600;
+	padding-top:2px;
+	padding-left:2px;
+	padding-bottom:2px;
+	margin-top:5px;
+	vertical-align:middle;
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#ff0F99DD,endColorStr=#ff0807BB,gradientType=0);
+	TEXT-ALIGN:left;
+	background-image: url(../img/TblGradMaster.png);
+	background-repeat:repeat-x;
+	background-position: left top;
+	width:648px;
+	border:2px solid;	
+}
+.imageSet{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.graphChgList{
+	margin-top: 8px;
+	margin-bottom: 8px;
+	width:625px;
+	background-color:White;
+}
+
+/*
+.ValidatorCallout
+{
+	font-size:9pt;
+	text-align:left;
+	background-color:white;
+	border:solid;
+	border-color:#FF0000;
+	border-width:2px;
+	padding:5 5 5 5;
+	height:auto;
+}
+*/
+.lblDateSpan{
+	background-color:Transparent;
+	border-style:none;
+	text-align:right;
+	width:648px;
+	Font-Size:9pt;
+	display:block;
+}
+.tableShowType{
+	font-size: 10pt;
+	background-color: cornsilk;
+	padding:5px 5px 5px 5px;
+	width:630px;
+}
+.tableSelDate{
+	margin-bottom:5px;
+	/*border:1 ridge #996600;*/
+}
+.tableShowSpan{
+	vertical-align: middle;
+	width: 650px;
+	background-color: #cccccc;
+	text-align: center;
+	padding:0px;
+	border-bottom:2px solid #996600;
+}
+.tableShowSpanInner{
+	font-size: 10pt;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	table-layout: fixed;
+}
+.tableOutline{
+	margin: 5px auto 10px 0px;
+	text-align: left;
+	border:2px solid #996600;
+	border-bottom:2px solid #996600;
+	border-spacing:0px;
+	width:650px;
+	padding:0px;
+}
+.TABLEHEADER {
+	/* filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#E2E2E2, endcolorstr=#B2B2B2, gradienttype=0); */
+	font-size:11pt;
+	/*font-weight:600;*/
+	color:#0000A0;
+	background-image: url(../img/TblGrad.png);
+	background-repeat:repeat-x;
+	background-position: left top;
+	width:100%;
+	vertical-align:middle;
+}
+.tableChartSet{
+	font-size: 10pt;
+	text-align: left;
+	background-color: cornsilk;
+	vertical-align: middle;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-right:0px;
+	padding-left:1px;
+}
+.td_span {
+	padding: 0px;
+}
+.imgCal {
+	margin-right:8px;
+}
+.btnpic{
+	margin-left:4px;
+	vertical-align:middle;	
+}
+.timechart{
+	width:100%;
+	height:50%;
+}
+
+.ScaleHeadDepth{
+	width:595px;
+}
+.ScaleHeadOther{
+	width:290px;
+}
+.tableLabelNo{
+	width: 38px;
+	height: 18px;	
+	background-color: #cccccc;
+	text-align: center;
+	font-weight:bold;
+	padding:0px;
+	border-right:2px solid #996600;
+	overflow:auto;
+}
+tableBorderTop{
+	border-top:2px solid #996600;
+}
+
+.ChartSetPanel{
+	Height:45px;
+	Width:90%;
+	background-color:Transparent;
+	text-align:left;
+	border-style:none;
+	padding-left:10px;
+}
+.ChartlblMax {
+	width:30px;
+	border-style:none;
+	text-align:center;
+	display:inline-block;
+}
+.ChartlblMin {
+	width:45px;
+	border-style:none;
+	text-align:center;
+	display:inline-block;
+}
+.
+.tableScaleBody2{
+	padding-top:3px;
+	font-size:10pt;
+	vertical-align:top;
+	line-height:30px;
+	text-align:left;
+}
+.txtScale{
+	border-style:inset;
+	height:14px;
+	Width:45px;
+	padding-right:4px;
+	padding-left:1px;
+}
+
+.hiddenBlock{
+	visibility:hidden;
+}
+.imgCollaps{
+	height:13px;
+	width:13px;
+	vertical-align:middle;
+	border-style:none;
+	padding:0px 3px 0px 20px;
+}
+.lblCollaps{
+	font-size:small;
+	color:Gold;
+	border-style:none;
+}
+.saveBtnOut{
+	width:100%;
+	text-align:center;
+}
+.saveBtn{
+	font-size:8pt;
+	font-weight:normal;
+	text-align:center;
+	vertical-align:middle;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	-webkit-border-radius: 4;
+	-moz-border-radius: 4;
+	border-radius: 4px;
+	color: #ffffff;
+	padding: 0px 5px 0px 5px;
+	text-decoration: none;
+}
+.saveBtn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+/*jQuery ToolTip用*/
+#tooltip {
+	position: absolute;
+	border:3px ridge #DD3;	/*#666;*/
+	background: #FFFFCC;	/*#DC3;*/
+	color: #11C;
+	padding: 8px;
+	opacity: 0.9;
+	font-size:8pt;
+	font-weight:normal;
+	/* ▼角丸 */
+	-webkit-border-radius: 5px; /* Chrome,Safari */
+	-moz-border-radius: 5px;    /* Firefox */
+	border-radius: 5px;         /* CSS3 */
+	-moz-box-shadow: 3px -3px 6px #444 ,3px 3px 6px #444,-3px 3px 6px #444,-3px -3px 6px #444;     /* Firefox用*/
+	-webkit-box-shadow: 2px -2px 6px #444 ,3px 3px 6px #444,-2px 2px 6px #444,-2px -2px 6px #444;  /*Safari,Google Chrome用*/
+	box-shadow: #444 2px -2px 6px, #444 3px 3px 6px, #444 -2px 2px 6px, #444 -2px -2px 6px; /* 10 10 30 */
+}
+.GraphPanel {
+	Border-Style:none;
+	border-width:0px;
+}
+
+.Term td.a {
+	width:105px;
+	border: 0 #000000 solid;
+	padding: 2px 0px 2px 5px;
+	text-align:left;
+}
+.Term td.b {
+	border: 0 #000000 solid;
+	padding: 2px 0px 2px 5px;
+	text-align:left;
+}
+.Term td.c {
+	border: 0 #000000 solid;
+	padding: 2px 0px 2px 5px;
+	text-align:left;
+}
+.ccdDrop {
+	width:140px;
+	height:25px;
+}
+.widebtn{
+	margin-top:5px;
+	padding-top:5px;
+	width:100%;
+	font-size:12pt;
+	font-weight:bolder;
+}
+.GrpDate{
+	background-color:Transparent;
+	border-style:none;
+	text-align:right;
+	margin:0px 5px 0px auto;
+	width:300px;
+	padding-right:10px;
+	Font-Size:9pt;
+	/*display:block;*/
+}
+.GrpDateFrame{
+	width: 100%;
+}
+.titleLower {
+	height:4%;
+	margin: 10px auto auto auto;
+	/*margin-top : auto;*/
+	/*padding-top:10px;*/
+	padding-bottom:10px;
+	text-align: center;
+	border-style:none;
+	display:block;
+}
+.print_page{
+	width: 251mm;
+	height: 180mm;
+	page-break-after: always;
+	position: relative; /* 固定ヘッダーの基準座標を定義 */
+}
+.print_page:last-child{
+	page-break-after: auto; /* 最後のページの改ページを防ぐ */
+}
+.opt{
+	/*margin-top:10px;*/
+	display: table-cell;
+	width:600px;
+	table-layout: fixed;	
+}
+.pre{
+	/*display: table-cell;*/
+	width:16px;
+	height:16px;
+	margin:auto auto auto 3px;
+	display: none;
+	vertical-align: middle;
+}
+.ffdl{
+	display: none;
+}
+.bpic{
+	margin-left: auto;
+	margin-right: auto;	
+	text-align:center;
+	background-image:url(../img/loader_s.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+/*--------------ボタン----------------*/
+.btn01 {
+	display: inline-block;
+	width: 60px;		/*200*/
+	height: 20px;		/*54*/
+	text-align: center;
+	text-decoration: none;
+	line-height: 16px;	/*54*/
+	outline: none;
+
+}
+.btn01::before,
+.btn01::after {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	content: '';
+}
+.btn01,
+.btn01::before,
+.btn01::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+.btn01 {
+	border: 1px solid #15aeec;
+	background-color: #49c0f0;
+	background-image: -webkit-linear-gradient(top, #49c0f0, #2cafe3);
+	background-image: linear-gradient(to bottom, #49c0f0, #2cafe3);
+	border-radius: 3px;
+	color: #fff;
+	line-height: 16px;			/*50px;*/
+	-webkit-transition: none;
+	transition: none;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	font-family:'メイリオ',
+				'Meiryo',
+				'Hiragino Kaku Gothic Pro',
+				'ヒラギノ角ゴ Pro W3',
+				'Osaka',
+				'ＭＳ Ｐゴシック',
+				sans-serif;	
+}
+.btn01:hover {
+	border:1px solid #1090c3;
+	background-color: #1ab0ec;
+	background-image: -webkit-linear-gradient(top, #1ab0ec, #1a92c2);
+	background-image: linear-gradient(to bottom, #1ab0ec, #1a92c2);
+}
+.btn01:active {
+	background: #1a92c2;
+	box-shadow: inset 0 3px 5px rgba(0, 0, 0, .2);
+	color: #1679a1;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
+}
+.btn01:disabled{
+	background-color: #c0c0c0;
+	background-image: linear-gradient(to bottom, #cfcfcf, #c0c0c0);
+	
+	color: #7b7b7b;
+}

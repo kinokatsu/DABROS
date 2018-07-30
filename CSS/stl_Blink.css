@@ -1,0 +1,29 @@
+﻿.BlinkBack {
+  background-color: #ff6060;
+  animation: bg-color 1200ms ease-out 700mss infinite;            /*alternate*/
+  -webkit-animation: bg-color 1200ms ease-out 700ms infinite;     /*alternate*/
+}
+@-webkit-keyframes bg-color {
+  0% { background-color: #ff6060; }
+  100% { background-color: #ffe5e5; }
+}
+@keyframes bg-color {
+  0% { background: #ff6060; }
+  100% { background: #ffe5e5; }
+}
+
+.BlinkBackGrad {
+  background:  -webkit-linear-gradient(top, #ff6060 0%,#f2825b 40%,#efefef 100%);
+  animation: bg-colorGrad 1.1s ease 0.2s infinite;
+  -webkit-animation: bg-colorGrad 1.1s ease 0.2s infinite;
+}
+@-webkit-keyframes bg-colorGrad {
+  0% { background-color: -webkit-linear-gradient(top, #ff6060 0%,#f2825b 40%,#efefef 100%); }
+  100% { background-color: -webkit-linear-gradient(top, #ffe5e5 0%,#ead8d3 40%,#ededed 100%); }
+  /*100% { background-color:-webkit-linear-gradient(top, #ff6060 0%,#f2825b 40%,#efefef 100%); }*/
+}
+@keyframes bg-colorGrad {
+  0% { background: -webkit-linear-gradient(top, #ff6060 0%,#f2825b 40%,#efefef 100%); }
+  100% { background: -webkit-linear-gradient(top, #ffe5e5 0%,#ead8d3 40%,#ededed 100%); }
+  /*100% { background: -webkit-linear-gradient(top, #ff6060 0%,#f2825b 40%,#efefef 100%);}*/
+}

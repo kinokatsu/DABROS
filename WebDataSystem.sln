@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebDataSystem", ".", "{D7B708F2-7D5A-458C-8D36-BE871BF0AC12}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = ""
+		Debug.AspNetCompiler.VirtualPath = "/deploy"
+		Debug.AspNetCompiler.PhysicalPath = "..\WebDataSystem\"
+		Debug.AspNetCompiler.TargetPath = "..\deploy\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/deploy"
+		Release.AspNetCompiler.PhysicalPath = "..\WebDataSystem\"
+		Release.AspNetCompiler.TargetPath = "..\deploy\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "65319"
+		VWDDynamicPort = "true"
+		StartServerOnDebug = "true"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ソリューション項目", "ソリューション項目", "{0CECCBAE-A884-447A-BE6F-5EDBE1E13B1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Description = 標準システム
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7B708F2-7D5A-458C-8D36-BE871BF0AC12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B708F2-7D5A-458C-8D36-BE871BF0AC12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B708F2-7D5A-458C-8D36-BE871BF0AC12}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B708F2-7D5A-458C-8D36-BE871BF0AC12}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

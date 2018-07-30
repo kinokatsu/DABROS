@@ -1,0 +1,72 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage01.master.vb" Inherits="MasterPage01" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+	<title id="MyTitle" runat="server">MasterPage01</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=0.4, minimum-scale=0.7, maximum-scale=5.0, user-scalable=yes" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link href="css/stl_master01.css" rel="stylesheet" type="text/css" />
+<%--	<script src="js/jquery-3.0.0.min.js" type="text/javascript"></script>	--%>
+	<link rel="SHORTCUT ICON" href="~/favicon.ico" />
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+	<body oncontextmenu="return false"> <%-- style="overflow:hidden;">--%>
+<%--		<script type="text/javascript">            //ctl00_MyAccordion
+			function pageLoad() {
+				var accordion = $find('ctl00_MyAccordion_AccordionExtender');
+				accordion.add_selectedIndexChanged(onACESelectedIndexChanged);
+			}
+			function onACESelectedIndexChanged(sender, eventArgs) {
+				document.getElementById("ctl00_hdnInput").value = sender.get_SelectedIndex();
+			}
+		</script>--%>
+		<form id="MasterPageFrm" runat="server" contenteditable="false">
+			<asp:ToolkitScriptManager ID="TScMan1" runat="server" AsyncPostBackTimeout="240" EnablePageMethods="True" EnableScriptGlobalization="True"></asp:ToolkitScriptManager>
+			<header id="Header" lang="ja" class="header"><%-- header   style="position:fixed; top:10px; left:180px; width: 80%; height: 57px" >--%>
+				<table id="MenuTable" style="padding: 0px; width: 100%;Height: 57px;" class="headBlock">
+					<tr>
+						<td class="headBlock" colspan="2" style="height:auto; font-size: 14pt; color: white; text-align: center; vertical-align: middle; background-color: #0000EC;border-spacing: 1px;" title="現場タイトル">
+							<div class="rg"><img id="imgloader" src="./img/comm.gif" alt="" class="asyncloader" /></div>
+							<asp:Literal ID="Lit1" runat="server" Mode="PassThrough" ></asp:Literal>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size: 1pt; text-align: left;  vertical-align: middle;" class="style1">
+							<asp:Panel ID="MenuHead" runat="server" CssClass="accordionMenuHeader">Menu
+							<asp:Image ID="ImgCollExp" runat="server" CssClass="leftspace10" ImageUrl="~/img/arl.png" title="メニューを隠す"/></asp:Panel>
+							<asp:Label ID="LblAlert" runat="server"  Visible="False" CssClass="AlertBox"></asp:Label>
+						</td>
+						<td class="style2" title="ログアウト">
+							<%--<td align="center" bgcolor="#0000ec" style="font-size: 9pt; text-align: center;" valign="middle" class="headBlockLogin" title="ログアウト">--%>
+							<asp:LoginStatus ID="LoginStatus1" runat="server" BorderStyle="None" EnableTheming="False" Font-Bold="True" ForeColor="White" Font-Size="9pt" LogoutPageUrl="~/Login.aspx" ToolTip="ログインページへ戻ります" LogoutAction="Redirect" />
+						</td>
+					</tr>
+				</table>
+			</header>
+			<nav>
+				<asp:Panel ID="ColL" runat="server" CssClass="columnL">
+					<asp:Accordion ID="MyAccordion" runat="server" FadeTransitions="True" HeaderCssClass="accordionHeader" Width="100px" BorderColor="#3333CC" 
+					BorderStyle="Solid" BorderWidth="0px" ContentCssClass="accordionContent" EnableTheming="False" EnableViewState="False" 
+					HeaderSelectedCssClass="accordionHeaderSelected" Height="195px" RequireOpenedPane="False" BackColor="White" SelectedIndex="-1">
+					</asp:Accordion>
+				</asp:Panel>
+<%--				<asp:CollapsiblePanelExtender ID="CollapsMenu" runat="server" 
+				CollapseControlID="MenuHead" CollapsedImage="~/img/arr.png" 
+				Enabled="True" ExpandControlID="MenuHead" 
+				ExpandedImage="~/img/arl.png" 
+				TargetControlID="ColL" ImageControlID="ImgCollExp" SuppressPostBack="True" 
+				ExpandDirection="Horizontal">
+				</asp:CollapsiblePanelExtender>--%>
+			</nav>
+			<asp:Panel ID="pnlColR" runat="server" CssClass="columnR" BorderStyle="None">
+				<asp:ContentPlaceHolder id="CntplHolder" runat="server">
+				</asp:ContentPlaceHolder>
+				<asp:Label ID="lblExistDataFile" runat="server" EnableTheming="False" ForeColor="Transparent" Visible="False" BorderStyle="None"></asp:Label>
+			</asp:Panel>
+			<%--<asp:TextBox ID="hdnInput" runat="server" Width="1px" BackColor="Transparent" BorderColor="Transparent" BorderStyle="None" BorderWidth="0px" ForeColor="White" Height="1px">-1</asp:TextBox>--%>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,123 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+<%@ Register assembly="C1.Web.UI.Controls.3" namespace="C1.Web.UI.Controls.C1Menu" tagprefix="cc1" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head id="Head1" runat="server">
+	<title id="MyTitle" runat="server">MasterPage</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=0.4, minimum-scale=0.7, maximum-scale=5.0, user-scalable=yes" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<script src="js/jquery-3.0.0.min.js" type="text/javascript"></script>
+	<script src="js/jquery.dimensions.js" type="text/javascript" ></script>
+	<link href="CSS/stl_master.css" rel="stylesheet" type="text/css" />
+	<link href="CSS/stl_tooltipster.css" rel="stylesheet" type="text/css" />
+	<link rel="SHORTCUT ICON" href="~/favicon.ico" />
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body oncontextmenu="return false">
+	<form id="MasterPageFrm" runat="server" contenteditable="false">
+		<div id="Header" lang="ja" class="headBlock">     
+			<div id="Title" class="LitTitle">
+				<asp:Literal ID="LitTitle" runat="server" Mode="Encode" ></asp:Literal>            
+			</div>
+			<div id="logout" class="logout">
+				<asp:LoginStatus ID="LoginStatus1" runat="server" BorderStyle="None" EnableTheming="False" Font-Bold="True" ForeColor="White" Font-Size="9pt" LogoutPageUrl="~/Login.aspx" ToolTip="ログインページへ戻ります" LogoutAction="Redirect" />
+			</div>
+			<div id="pulldown" class="navmenu">
+				<cc1:C1Menu ID="C1WMenu" runat="server" CollapseAnimation="ScrollInFromTop" 
+					CollapseDuration="300" CollapseEasing="EaseOutElastic" Orientation="Horizontal" 
+					VisualStylePath="~/VisualStyles" 
+					AllowMultiCheckable="False" CollapseDelay="50" ExpandDelay="50" 
+					ExpandDuration="300" Width="10px" UseEmbeddedjQuery="False" 
+					UseEmbeddedVisualStyles="False" VisualStyle="ArcticFoxNew" 
+					ClientIDMode="AutoID">
+				</cc1:C1Menu>
+			
+				<cc1:C1Menu id="C1menu0" runat="server" VisualStylePath="~/VisualStyles" Width="642px" CssClass="c1-clear-both" ExpandAnimation="ScrollInFromTop" CollapseAnimation="ScrollOutToTop" ClientIDMode="AutoID">
+					<Items>
+						<cc1:C1MenuItem ID="C1MenuItem1" runat="server" Text="ホーム">
+							<Items>
+								<cc1:C1MenuItem ID="C1MenuItem2" runat="server" NavigateUrl="http://www.grapecity.com/japan/" 
+									Text="GrapeCity ホーム">
+								</cc1:C1MenuItem>
+								<cc1:C1MenuItemHeader ID="C1MenuItemHeader1" runat="server" Text="&amp;nbsp;リンク">
+								</cc1:C1MenuItemHeader>
+								<cc1:C1MenuItem ID="C1MenuItem3" runat="server" NavigateUrl="http://dotnetdemo.grapecity.com/demo/C1Studio/SiteMap.aspx" 
+									Text="サイトマップ">
+								</cc1:C1MenuItem>
+								<cc1:C1MenuItem ID="C1MenuItem4" runat="server" 
+									NavigateUrl="https://www.grapecity.com/japan/feedback/" Text="フィードバック">
+								</cc1:C1MenuItem>
+								<cc1:C1MenuItemSeparator ID="C1MenuItemSeparator1" runat="server">
+								</cc1:C1MenuItemSeparator>
+								<cc1:C1MenuItem ID="C1MenuItem5" runat="server" NavigateUrl="http://www.grapecity.com/japan/support/powertools_contact_list.htm" 
+									Text="問い合わせ">
+								</cc1:C1MenuItem>
+							</Items>
+						</cc1:C1MenuItem>
+						<cc1:C1MenuItem ID="C1MenuItem6" runat="server" Text="もっとよく知る">
+							<Items>
+								<cc1:C1MenuItem ID="C1MenuItem7" runat="server" 
+									NavigateUrl="http://dotnetdemo.grapecity.com/demo/C1Studio/FAQ.aspx" Text="よくある質問集">
+								</cc1:C1MenuItem>
+								 <cc1:C1MenuItem ID="C1MenuItem9" runat="server" 
+									NavigateUrl="http://dotnetdemo.grapecity.com/demo/C1Studio/Demo.aspx" Text="デモ一覧">
+								</cc1:C1MenuItem>
+							</Items>
+						</cc1:C1MenuItem>
+						<cc1:C1MenuItemSeparator ID="C1MenuItemSeparator2" runat="server">
+						</cc1:C1MenuItemSeparator>
+						<cc1:C1MenuItem ID="C1MenuItem8" runat="server" Text="ダウンロード">
+							<Items>
+								<cc1:C1MenuItemHeader ID="C1MenuItemHeader2" runat="server" Text="&amp;nbsp;ダウンロードリンク">
+								</cc1:C1MenuItemHeader>
+								<cc1:C1MenuItem ID="C1MenuItem10" runat="server" 
+									NavigateUrl="http://www.grapecity.com/japan/support/database/p7_396_download.htm#pdfcatalog" 
+									Text="カタログ">
+								</cc1:C1MenuItem>
+								<cc1:C1MenuItem ID="C1MenuItem11" runat="server" 
+									NavigateUrl="http://www.grapecity.com/japan/support/database/p7_396_download.htm#trialversions" Text="トライアル版">
+								</cc1:C1MenuItem>
+								 <cc1:C1MenuItem ID="C1MenuItem13" runat="server" 
+									NavigateUrl="http://www.grapecity.com/japan/support/database/p7_396_download.htm#productpatches" Text="アップデート">
+								</cc1:C1MenuItem>
+							</Items>
+						</cc1:C1MenuItem>
+						<cc1:C1MenuItemSeparator ID="C1MenuItemSeparator3" runat="server">
+						</cc1:C1MenuItemSeparator>
+						<cc1:C1MenuItem ID="C1MenuItem12" runat="server" Text="ご購入について">
+							<Items>
+								<cc1:C1MenuItemHeader ID="C1MenuItemHeader3" runat="server" Text="&amp;nbsp;リンク">
+								</cc1:C1MenuItemHeader>
+								<cc1:C1MenuItem ID="C1MenuItem14" runat="server" 
+									NavigateUrl="http://www.grapecity.com/japan/purchase/" 
+									Text="ご購入方法">
+								</cc1:C1MenuItem>
+								<cc1:C1MenuItem ID="C1MenuItem15" runat="server" 
+									NavigateUrl="http://dotnetdemo.grapecity.com/demo/C1Studio/Licenses.aspx" Text="ライセンスについて">
+								</cc1:C1MenuItem>
+								<cc1:C1MenuItemSeparator ID="C1MenuItemSeparator4" runat="server">
+								</cc1:C1MenuItemSeparator>
+								<cc1:C1MenuItem ID="C1MenuItem18" runat="server" 
+									NavigateUrl="http://www.grapecity.com/japan/support/" Text="サポートサービス">
+								</cc1:C1MenuItem>
+							</Items>
+						</cc1:C1MenuItem>
+					</Items>
+				</cc1:C1Menu>
+			
+			</div>
+		</div>
+		<div id="FrmMasterPage" >
+			<asp:contentplaceholder id="CntplHolder" runat="server">
+			</asp:contentplaceholder>
+		</div>
+		<asp:Label ID="lblExistDataFile" runat="server" EnableTheming="False" ForeColor="Transparent" Visible="False" BorderStyle="None"></asp:Label>
+		<asp:TextBox ID="hdnInput" runat="server" Width="1px" BackColor="Transparent" BorderColor="Transparent" BorderStyle="None" BorderWidth="0px" ForeColor="White" Height="1px">-1</asp:TextBox>
+		<asp:ToolkitScriptManager ID="TScMan1" runat="server" AsyncPostBackTimeout="240" CombineScripts="True" EnablePageMethods="True" EnableScriptGlobalization="True" EnableScriptLocalization="True" ScriptMode="Debug">
+		</asp:ToolkitScriptManager>
+	</form>
+</body>
+</html>

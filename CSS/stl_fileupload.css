@@ -1,0 +1,139 @@
+﻿body {
+	font-size: 10pt;
+	direction: ltr;
+	background-color: white;
+	text-decoration: none;
+	margin-bottom:10;
+	/*outline: solid 1px;*/
+	/*margin-top: 15;*/
+	/*margin-right: 10;*/
+	/*margin-left: 10;*/
+	/*margin: auto;*/
+	font-family:'メイリオ',
+				'Meiryo',
+				'Hiragino Kaku Gothic Pro',
+				'ヒラギノ角ゴ Pro W3',
+				'Osaka',
+				'ＭＳ Ｐゴシック',
+				sans-serif;
+}
+/* IE8+, Chrome */
+input, button {
+  outline: 0;
+}
+input[type=text]::-ms-clear {}
+
+/* Firefox */
+input::-moz-focus-inner, button::-moz-focus-inner {
+  border: 0;
+}
+/*div{
+	outline: none 0px;
+	margin:auto;
+}*/
+/* 印刷しないコントロール */
+@media print {
+/** { zoom: 0.96; }*/
+ body { overflow: visible !important; }
+.noprint {visibility:hidden;}
+.dspOnly {display:none;}
+}
+/*基本*/
+.BASICSET{
+	font-size: 10pt;
+	direction: ltr;
+	/*font-family: 'MS UI Gothic';*/
+}
+/* ラベル　左寄せ　*/
+.LABELS_Left {
+	TEXT-ALIGN:left;
+}
+.noaccordionHeader {
+	width: 650px;
+	height:auto;
+	border: 1px solid #2F4F4F;
+	color:White;
+	font-size:13pt;
+	font-weight:600;
+	padding-top:2px;
+	padding-left:2px;
+	padding-bottom:2px;
+	margin-top:5px;
+	vertical-align:middle;
+	-ms-filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#ff0F99DD,endColorStr=#ff0807BB,gradientType=0);
+	text-align:left;
+	background-image: url(../img/TblGradNote.png);
+	background-repeat:repeat-x;
+	background-position: left top;
+	margin-bottom:5px;
+}
+.panelpad {
+	padding:5px 0px 5px 10px;
+	Width:640px;
+	height:auto;
+	text-align:Left;
+	background-color:Beige;
+	border: 2px solid DimGray;
+	Font-Size:11pt;
+}
+.uploadpanel {
+	width:100%;
+	height:100px;
+	text-align: left;
+	border-style: none;
+}
+.uploadpart {
+	margin:  15px;
+	width:100%;
+	height: auto;
+}
+.alertlabel {
+	color:Red;
+	width:100%;
+	height:auto;
+	text-align:left;
+	border-style: none;
+	font-weight: bold;
+	font-size: medium;
+	margin:15px;
+}
+.imglist {
+	display:table;
+	padding: 10px 0px 10px 0px;
+	width:97%;
+	margin: 10px 0px 10px 20px;
+	overflow: visible;
+	/*border:1px solid black;*/
+}
+.colleft {
+	display:table-cell;
+	text-align:right;
+	width :270px;
+	height: auto;
+	float:right;
+	/*border:1px solid red;*/
+}
+.colright {
+	display:table-cell;
+	padding:10px;
+	width:330px;
+	height: auto;    
+	vertical-align: top;
+	/*border:1px solid green;*/
+}
+.imglistbox {
+	width:270px;
+	height:150px;
+	margin-bottom:5px;
+}
+.msglabel {
+	width:100%;
+	margin:  15px;
+	text-align:left;
+	border-style: none;
+	font-size:inherit;
+}
+.list {
+	color: #0000ff;
+	font-weight:900;
+}

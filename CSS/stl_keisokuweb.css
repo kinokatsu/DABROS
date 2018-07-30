@@ -1,0 +1,208 @@
+﻿body
+{
+	font-size: 10pt;
+	direction: ltr;
+	background-color: white;
+	text-decoration: none;
+	/*outline: solid 1px;*/
+	/*margin-top: 15;*/
+	/*margin-right: 10;*/
+	/*margin-left: 10;*/
+	/*margin: auto;*/
+}
+/*div{
+	outline: none 0px;
+	margin:auto;
+}*/
+/* 印刷しないコントロール */
+@media print {
+.noprint {visibility:hidden;}
+.dspOnly {display:none;}
+}
+
+/* グラデーションのテキストボックス */
+.TEXTBOXES {
+	font-size: 10pt;
+	TEXT-ALIGN: center;
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=PowderBlue, endcolorstr=white, gradienttype=1);
+    width: 100%;
+    height: 80%;
+    -ms-ime-mode:disabled;
+}
+
+.CALENDERBACK {
+	background-color:White;
+}
+
+/*データ一覧用ラベル*/
+/*	background-color:#C8FFC4;*/
+/*	float:inherit;*/
+/*	font-size:10pt;*/
+.DataLBLCenter {
+	font-family: 'MS UI Gothic';
+	TEXT-ALIGN: center;
+	vertical-align:middle;
+	position:absolute;
+	padding-left:2px;
+	padding-right:2px;
+	padding-bottom:1px;
+	padding-top:1px;
+	white-space:nowrap;
+}
+.DataLBLLeft {
+	font-family: 'MS UI Gothic';
+	TEXT-ALIGN: left;
+	vertical-align:middle;
+	position:absolute;
+	padding-left:2px;
+	padding-right:2px;
+	padding-bottom:1px;
+	padding-top:1px;
+	white-space:nowrap;
+}
+.DataLBLRight {
+	font-family: 'MS UI Gothic';
+	TEXT-ALIGN: right;
+	vertical-align:middle;
+	position:absolute;
+	padding-left:2px;
+	padding-right:2px;
+	padding-bottom:1px;
+	padding-top:1px;
+	white-space:nowrap;
+}
+
+/* ラベル　センタリング　*/
+.LABELS {
+	TEXT-ALIGN:center;
+}
+/* ラベル　右寄せ　*/
+.LABELS_Right {
+	TEXT-ALIGN:right;
+}
+/* ラベル　左寄せ　*/
+.LABELS_Left {
+	TEXT-ALIGN:left;
+}
+
+.TABLEHEADER {
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#E2E2E2, endcolorstr=#B2B2B2, gradienttype=0);
+	color:#0000A0
+}	
+
+.MENUBASE {
+	/*font-family: 'MS UI Gothic';*/
+	font-size:10pt;	
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#1C00B7, endcolorstr=white, gradienttype=0);
+	color:#0000A0
+}	
+.MENUITEMS {
+	/*font-family: 'MS UI Gothic';*/
+	font-size:10pt;
+	color:White;
+	padding:4px
+	background-color:#6633ff;
+}	
+.MENUDYNAMICITEMS {
+	/*font-family: 'MS UI Gothic';*/
+	font-size:10pt;	
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=white, endcolorstr=#B1A4FF, gradienttype=0);
+	color:#0000A0;
+	background-color:#6633ff;
+}	
+.MENUDYNAMICSTYLEITEMS {
+	/*font-family: 'MS UI Gothic';*/
+	font-size:10pt;
+    color:White;
+	background-color:#6633ff;
+	border:ridge 1px Blue
+}
+.MENUNORMALITEMS {
+	/*font-family: 'MS UI Gothic';*/
+	font-size:10pt;
+	color:White;
+	background-color:#6633ff;
+}	
+.MENUSELECTITEMS {
+	/*font-family: 'MS UI Gothic';*/
+	font-size:10pt;
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=white, endcolorstr=#B1A4FF, gradienttype=0);
+	color:#0000A0;
+	background-color:#6633ff;
+}
+.headBlock {
+	-ms-filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#ffccff00,endColorStr=#ff99ff00,gradientType=2);
+}
+
+.HR {
+  color: #0000ff; /* 線の色(IE用) */
+  background-color: #0000ff; /* 線の色(NN用) */
+  height: 1px; /* 線の太さ */
+  border: 0px; /* 枠の太さ */
+  -ms-filter: Alpha(opacity=100, finishopacity=0, style=3); /* フィルタ */
+}
+
+.noaccordionHeader {
+	border: 1px solid #2F4F4F;
+	color:White;
+	background-color:#2E4F7B;
+	/*font-family:MS UI Gothic;*/
+	font-size:14pt;
+	font-weight:bold;
+	padding:0px;
+	margin-top:5px;
+}
+
+.accordionHeader {
+	border: 1px solid #2F4F4F;
+	color:White;
+	background-color:#2E4F7B;
+	/*font-family:MS UI Gothic;*/
+	font-size:14pt;
+	font-weight:bold;
+	padding:0px;
+	margin-top:5px;
+	cursor:pointer;
+}
+
+.accordionContent {
+	background-color:#D3DEEF;
+	border:1px dashed #2F4F4F;
+	border-top:none;
+	padding:2px;
+	padding-top:0px;
+}
+
+.accordionLink {
+	background-color:#D3DEEF;
+	color:White;
+}
+
+.collapsePanel {
+	height:1px;
+	overflow:hidden;
+}
+
+.validatorCalloutHighlight {
+	/*background-color:lemonchiffon;
+	font-size:12pt;*/
+	background-color:Red;
+	font-size:10pt;
+	text-align:left;
+}
+
+.ListSearchExtenderPrompt {
+	font-style:italic;
+	color:Gray;
+	background-color:white;
+}
+body,.TEXTBOXES,.MENUBASE,.MENUITEMS,.MENUDYNAMICITEMS,.MENUDYNAMICSTYLEITEMS,.MENUNORMALITEMS,.MENUSELECTITEMS
+{
+	    font-family:'メイリオ',
+    			'Meiryo',
+    			'Hiragino Kaku Gothic Pro',
+    			'ヒラギノ角ゴ Pro W3',
+    			'Osaka',
+    			'ＭＳ Ｐゴシック',
+    			sans-serif;
+}

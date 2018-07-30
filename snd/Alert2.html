@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="ja-JP" xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="../js/jquery-3.0.0.min.js" type="text/javascript"></script>
+<TITLE>警報が発生しました！</TITLE>
+<script type="text/javascript">
+  var a;
+  window.addEventListener('DOMContentLoaded',
+    function() {
+      // オーディオ機能に対応しているかをチェック（1）
+      if (HTMLAudioElement) {
+        // 音声ファイルを準備（2）
+        a = new Audio('./Alarm_Sound.mp3');
+        // 音声ファイルをサポートしているかをチェック（3）
+        var result = a.canPlayType('audio/mp3');
+        if (result.match(/^(probably|maybe)$/)) {
+          a.autoplay = true;
+          a.loop = true;
+          a.playbackRate = 1.5;
+          /*a.play();  // 再生開始（4）*/
+        }
+      }
+      $("#stopbtn").click(function (e) {
+        a.pause();
+      });
+    }
+  );
+  // $(function() {
+  //   $("#stopbtn").click(function (e) {
+  //     a.pause();
+  //   });
+  // });
+
+</script>
+
+</HEAD>
+<BODY>
+<form>
+	<input id="stopbtn" type="button" name="" value="停止">
+</form>
+<EMBED src="./AlmSnd.mp3" type="application/x-mplayer2" autostart="true" width="45" height="30" PlayCount="0">
+<!--<audio src="./Alarm_Sound.mp3" controls autoplay loop preload="auto">
+    ご利用のブラウザでは、音声の再生はできません
+    <a href="./Alarm_Sound.mp3">ダウンロード</a>］
+</audio>-->
+</BODY>
+</HTML>

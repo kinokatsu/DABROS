@@ -1,0 +1,536 @@
+﻿body
+{
+	font-size: 8pt;
+	direction: ltr;
+	background-color: white;
+	text-decoration: none;
+	/*outline: solid 1px;*/
+	margin-top: 0px;
+	/*margin-right: 10;*/
+	margin-right: 0px;
+	margin-left: 0px;
+	/*margin: auto;*/
+	font-family:'メイリオ',
+			'Meiryo',
+			'Hiragino Kaku Gothic Pro',
+			'ヒラギノ角ゴ Pro W3',
+			'Osaka',
+			'ＭＳ Ｐゴシック',
+			sans-serif;
+}
+/*div{
+	outline: none 0px;
+	margin:auto;
+}*/
+/* 印刷時に使用されるスタイル */
+@media print {
+.noprint {visibility:hidden;}
+.dspOnly {display:none;}
+/*.marg {margin-left: 10px;*/
+/*	   margin-top: 8px;}*/
+.navmenu {display:none;}
+.logout {display:none;}
+}
+/* jQueryによる指定用 */
+.TableAlarm {
+	font-size: 10pt;
+	height:auto; 
+	width:auto;
+	padding-right: 0px; 
+	padding-left: 0px; 
+	padding-bottom: 0px; 
+	padding-top: 0px;
+	margin:0px 0px 0px 2px;
+	vertical-align: middle;
+	text-align: center;
+}
+.header {
+	margin-top: 0px;	
+	text-align: left;
+	height:72px;
+	_height: 65px;		/*IE6*/
+	width:100%;
+	position:fixed;
+	z-index:3;
+}
+.logout {
+	float:right;
+	margin-right:15px;
+	margin-left:0px;
+	margin-top:5px;
+	margin-bottom:0px;
+	width:auto;
+	height:18px;
+	text-align:center;
+	outline: none;
+}
+.LitTitle {
+	float:none;
+	font-size:14pt;
+	color:White;
+	top:0px;
+	margin-top:auto;
+	text-align:center;
+	vertical-align:top;
+}
+.navmenu {
+	/*float:left;*/
+	/*width:80%;*/
+	/*height:20px;*/
+	margin-left:3px;
+	text-align:left;
+	/*z-index:4;*/
+}
+.pulldownmenu {
+    z-index:4;
+}
+.headBlock {
+	/*position:fixed;*/
+	/*z-index:3;*/
+	width:100%;
+	height:54px;
+	/*-ms-filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#ffccff00,endColorStr=#ff99ff00,gradientType=2);*/
+	/*background-image: url(../img/TblGradMaster.png);*/
+	/*background-repeat:repeat-x;*/
+	/*background-position: left top;*/
+	font-family:'メイリオ','Meiryo','Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','Osaka','ＭＳ Ｐゴシック',sans-serif;	
+	text-align:left;
+	/*border-spacing: 0px;*/
+	/*border-width: 0px 0px 0px 0px;*/
+	border-style: none;
+	/*border-color: #FFFFFF;*/
+	background-color:Navy;
+	margin-bottom:6px;
+	background: rgb(108,147,201); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(108,147,201,1) 0%, rgba(0,66,173,1) 49%, rgba(41,137,216,1) 50%, rgba(0,0,113,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(108,147,201,1)), color-stop(49%,rgba(0,66,173,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(100%,rgba(0,0,113,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(108,147,201,1) 0%,rgba(0,66,173,1) 49%,rgba(41,137,216,1) 50%,rgba(0,0,113,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(108,147,201,1) 0%,rgba(0,66,173,1) 49%,rgba(41,137,216,1) 50%,rgba(0,0,113,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(108,147,201,1) 0%,rgba(0,66,173,1) 49%,rgba(41,137,216,1) 50%,rgba(0,0,113,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(108,147,201,1) 0%,rgba(0,66,173,1) 49%,rgba(41,137,216,1) 50%,rgba(0,0,113,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c93c9', endColorstr='#000071',GradientType=0 ); /* IE6-9 */
+	-webkit-box-shadow: 0px 10px 5px 7px rgba(0,0,0,.4);
+	-moz-box-shadow: 0px 10px 5px 7px rgba(0,0,0,.4);
+	box-shadow: 0px 2px 5px 1px rgba(0,0,0,.4);
+	box-shadow: 0px 2px 5px rgba(0,0,0,.4);
+}
+.headBlockMenu{
+	background-repeat:repeat-x;
+	background-position: left top;
+	min-width: 200px;
+}	
+.headBlockLogin {
+	-ms-filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#ffccff00,endColorStr=#ff99ff00,gradientType=2);
+	background-color: #0000ec;
+	background-image: url(../img/TblGradMaster.png);
+	background-repeat:repeat-x;
+	background-position: left top;
+	table-layout:fixed;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	font-size: 9pt; 
+	width: 130px;
+	min-width: 130px;
+	margin: 0px auto 0px auto;
+	text-align:center;	
+	border-width: 1px 0px 0px 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	}
+.HR {
+	color: #0000ff; /* 線の色(IE用) */
+	background-color: #0000ff; /* 線の色(NN用) */
+	height: 1px; /* 線の太さ */
+	border: 0px; /* 枠の太さ */
+	-ms-filter: Alpha(opacity=100, finishopacity=0, style=3); /* フィルタ */
+}
+.menuarrow {
+	border:none;
+}
+
+.MENUBASE {
+	font-family: 'MS UI Gothic';
+	font-size:11pt;	
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#1C00B7, endcolorstr=white, gradienttype=0);
+	color:#0000A0;
+	padding:0px;
+}	
+.MENUITEMS {
+	font-family: 'MS UI Gothic';
+	font-size:11pt;
+	color:White;
+	padding:4px
+	background-color:#6633ff;
+	padding:0px;
+}	
+.MENUDYNAMICITEMS {
+	font-family: 'MS UI Gothic';
+	font-size:11pt;	
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=white, endcolorstr=#B1A4FF, gradienttype=0);
+	color:#0000A0;
+	background-color:#6633ff;
+	padding:0px;
+		background-image: url(../img/GradMenu.png);
+	background-repeat:repeat-x;
+	background-position: left top;
+}	
+.MENUDYNAMICSTYLEITEMS {
+	font-family: 'MS UI Gothic';
+	font-size:11pt;
+	color:White;
+	background-color:#6633ff;
+	border:ridge 1px Blue
+	padding:0px;
+}
+.MENUNORMALITEMS {
+	font-family: 'MS UI Gothic';
+	font-size:11pt;
+	color:White;
+	background-color:#6633ff;
+	padding:0px;
+}	
+.MENUSELECTITEMS {
+	font-family: 'MS UI Gothic';
+	font-size:11pt;
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=white, endcolorstr=#B1A4FF, gradienttype=0);
+	color:#0000A0;
+	background-color:#6633ff;
+	padding:0px;
+}
+/*データ一覧用ラベル*/
+/*	background-color:#C8FFC4;*/
+/*	float:inherit;*/
+/*	font-size:10pt;*/
+/* 共通部分のまとめ */
+.DataLBLCenter,.DataLBLCenterB,.DataLBLLeft,.DataLBLLeftB,.DataLBLRight,.DataLBLRightB,.DataLBLCenterM,
+  .DataLBLCenterBM,.DataLBLLeftM,.DataLBLLeftBM,.DataLBLRightM,.DataLBLRightBM,.DataLBLRightBB,.DataLBLCenterBMR,
+  .DataLBLCenterBR,.DataLBLLeftBR,.DataLBLRightBR,.DataLBLCenterR,.DataLBLLeftR,.DataLBLRightR {
+	font-family: 'MS UI Gothic','Lucida Grande', Meiryo, sans-serif;
+	vertical-align: middle;
+	position:absolute;
+	padding-left:2px;
+	padding-right:2px;
+	padding-bottom:1px;
+	padding-top:1px;
+	white-space:nowrap;
+	-moz-box-shadow: 1px 1px 2px #797979;     /* Firefox用*/
+	-webkit-box-shadow: 1px 1px 2px #797979;  /*Safari,Google Chrome用*/
+	box-shadow: #797979 1px 1px 2px;          /* 10 10 30 */
+}
+.DataLBLCenter,.DataLBLCenterB,.DataLBLCenterM,.DataLBLCenterBM,.DataLBLCenterBMR,.DataLBLCenterBR,.DataLBLCenterR {
+	text-align: center;
+}
+.DataLBLLeft,.DataLBLLeftB,.DataLBLLeftM,.DataLBLLeftBM,.DataLBLLeftBR,.DataLBLLeftR,.DataLBLLeftBMR {
+	text-align: left;
+}
+.DataLBLRight,.DataLBLRightB,.DataLBLRightM,.DataLBLRightBM,.DataLBLRightBB,.DataLBLRightBR,.DataLBLRightR,.DataLBLRightBMR {
+	text-align: right;
+}
+.DataLBLCenterB,.DataLBLLeftB,.DataLBLRightB,.DataLBLCenterBM,.DataLBLLeftBM,.DataLBLRightBM,.DataLBLRightBB,.DataLBLCenterBMR,.DataLBLLeftBMR,.DataLBLRightBMR {
+	font-weight: 700;
+}
+.DataLBLCenterBR,.DataLBLLeftBR,.DataLBLRightBR,.DataLBLCenterBMR,.DataLBLLeftBMR,.DataLBLRightBMR,.DataLBLRightBBR,.DataLBLCenterR,.DataLBLLeftR,.DataLBLRightR,.DataLBLCenterMR,.DataLBLLeftMR,.DataLBLRightMR {
+    -webkit-border-radius: 4px; /* Chrome,Safari */
+    -moz-border-radius: 4px;    /* Firefox */
+    border-radius: 4px;         /* CSS3 */
+}
+/*-------------NEW-----------------*/
+.DataLBL{
+	font-family: 'MS UI Gothic','Lucida Grande', Meiryo, sans-serif;
+	vertical-align: middle;
+	position:absolute;
+	padding-left:2px;
+	padding-right:2px;
+	padding-bottom:1px;
+	padding-top:1px;
+	white-space:nowrap;
+}
+.LCe {
+	text-align: center;
+}
+.LLe {
+	text-align: left;
+}
+.LRi {
+	text-align: right;
+}
+.LCeB {
+	text-align: center;
+	font-weight: 700;
+}
+.LLiB {
+	text-align: left;
+	font-weight: 700;
+}
+.LRiB {
+	text-align: right;
+	font-weight: 700;
+}
+.Shd{
+	-moz-box-shadow: 1px 1px 2px #797979;     /* Firefox用*/
+	-webkit-box-shadow: 1px 1px 2px #797979;  /*Safari,Google Chrome用*/
+	box-shadow: #797979 1px 1px 2px;          /* 10 10 30 */
+}
+.Opa9 {
+	opacity: 0.9;
+}
+.Opa8 {
+	opacity: 0.8;
+}
+.Opa6 {
+	opacity: 0.6;
+}
+.Opa4 {
+	opacity: 0.4;
+}
+.Opa0 {
+	background-color: rgba(255,255,255,0);
+}
+.Opa09 {
+	background-color: rgba(204,255,255,0);
+}
+.Opa08 {
+	background-color: rgba(229,255,255,0);
+}
+.Br8{
+    -webkit-border-radius: 8px; /* Chrome,Safari */
+    -moz-border-radius: 8px;    /* Firefox */
+    border-radius: 8px;         /* CSS3 */
+}
+.Br6{
+    -webkit-border-radius: 6px; /* Chrome,Safari */
+    -moz-border-radius: 6px;    /* Firefox */
+    border-radius: 6px;         /* CSS3 */
+}
+.Br4{
+    -webkit-border-radius: 4px; /* Chrome,Safari */
+    -moz-border-radius: 4px;    /* Firefox */
+    border-radius: 4px;         /* CSS3 */
+}
+.FW7{
+	font-weight: 700;
+}
+/*IE*/
+@media all and (-ms-high-contrast:none){
+  .DataLBLCenterB,.DataLBLLefB,.DataLBLRightB,.DataLBLCenterBM,.DataLBLLefBM,.DataLBLRightBM {
+    	font-weight: 500;
+  }
+}
+/*Firefox Hack*/
+@-moz-document url-prefix() {
+	.DataLBLCenterB,.DataLBLLefB,.DataLBLRightB,.DataLBLCenterBM,.DataLBLLefBM,.DataLBLRightBM {
+		font-weight: 500;
+	}
+}
+/*Chrome Hack*/
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)  {
+	.DataLBLCenterB,.DataLBLLefB,.DataLBLRightB,.DataLBLCenterBM,.DataLBLLefBM,.DataLBLRightBM {
+		font-weight: 900;
+	}
+}
+/* HTMLタグ一覧のページのミニボックス */
+/*.onebox1 {
+	border-width: 0px;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}*/
+.NowrapLabel {
+	white-space: nowrap;
+	margin-bottom: 5px;
+}
+.NoClass {
+}
+.statusTable {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	vertical-align: middle;
+	text-align: center;
+	border: 3px ridge silver;
+	border-spacing: 1px;
+	border-collapse:separate;
+	background-color: White;
+	font-size: 11pt;
+	font-family: 'MS UI Gothic','Lucida Grande', Meiryo, sans-serif;
+}
+.statusTableCell , .statusTableHeader {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	border: 1px ridge silver;
+	border-spacing: 0;
+	border-collapse: collapse;
+	white-space: nowrap;
+	font-size: 10pt;
+	min-height:17px;
+	height:17px;
+	font-family: 'MS UI Gothic','Lucida Grande', Meiryo, sans-serif;
+}
+/*jQuery ToolTip用*/
+#tooltip {
+	position: absolute;
+	width: 16em;
+	border:3px ridge #DD3;	/*#666;*/
+	background: #FFFFCC;	/*#DC3;*/
+	background: -moz-linear-gradient(top,  #ffffcc 0%, #fffff4 28%, #efe07c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffcc), color-stop(28%,#fffff4), color-stop(100%,#efe07c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffcc 0%,#fffff4 28%,#efe07c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffcc 0%,#fffff4 28%,#efe07c 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffcc 0%,#fffff4 28%,#efe07c 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffcc 0%,#fffff4 28%,#efe07c 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffcc', endColorstr='#efe07c',GradientType=0 ); /* IE6-9 */
+	color: #11C;
+	padding: 8px;
+	opacity: 0.9;
+	/*font-family: 'MS UI Gothic';*/
+	font-size:10pt;
+	/* ▼角丸 */
+	-webkit-border-radius: 10px; /* Chrome,Safari */
+	-moz-border-radius: 10px;    /* Firefox */
+	border-radius: 10px;         /* CSS3 */    
+	-moz-box-shadow: 2px -2px 6px #444 ,3px 3px 6px #444,-2px 2px 6px #444,-2px -2px 6px #444;     /* Firefox逕ｨ*/
+	-webkit-box-shadow: 2px -2px 6px #444 ,3px 3px 6px #444,-2px 2px 6px #444,-2px -2px 6px #444;  /*Safari,Google Chrome逕ｨ*/
+	box-shadow: #444 2px -2px 6px, #444 3px 3px 6px, #444 -2px 2px 6px, #444 -2px -2px 6px; /* 10 10 30 */
+	z-index:3;
+}
+#tooltip h3, #tooltip div {
+	text-align: left;
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0;
+}
+#tooltip.darktip {
+	background: #333;
+}
+#ctl00_CntplHolder_LblAlert {
+	white-space:nowrap;
+}
+/*マウスポインタの座標表示*/
+#mpxy {
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:90px;
+	color:black;
+	background-color:Silver;
+	font-size:7pt;
+	border-width:1px;
+	border-style:solid;
+	text-align:center;
+}
+#MainContent {
+	padding-top: 60px;
+	}
+.topImage {
+	margin-top :5px;
+	margin-left: 10px;
+	margin-bottom:8px;
+	border-bottom-style:none;
+	/*border: 1px solid black;*/
+}
+.periodTable {
+	border:3px ridge silver;    
+	background-color:#E0FFFF;       /*LightCyan;*/
+	padding:1px 1px 1px 1px;
+	margin-left: 8px;
+	font-size:10pt;
+		/* ▼角丸 */
+		-webkit-border-radius: 10px; /* Chrome,Safari */
+		-moz-border-radius: 10px;    /* Firefox */
+		border-radius: 10px;         /* CSS3 */
+	}
+/*.periodCol1 {*/
+/*    border:none;*/
+/*    }*/
+.periodCol1 {
+	border:none;
+	white-space:nowrap;
+	padding-right:10px;
+	}    
+/* ここで指定することで、「ログイン」だけの設定が有効となる */
+#ctl00_LoginStatus1 {
+	font-style:normal;
+	background: none;
+	box-shadow: none;
+	text-decoration:none;
+	outline: none;
+}
+#logout a:hover {
+	color:#e8e800
+}
+#back-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	/*margin-left: 0px;*/
+}
+#back-top a {
+	width: 90px;
+	display: block;
+	text-align: center;
+	/*font: 11px/100% Arial, Helvetica, sans-serif;*/
+	padding: 15px 0;
+	text-transform: none;       /*uppercase;*/
+	text-decoration: none;
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0.5) 24%, rgba(229,229,229,0.8) 81%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(24%,rgba(255,255,255,0.5)), color-stop(81%,rgba(229,229,229,0.8))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0.5) 24%,rgba(229,229,229,0.8) 81%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,0.5) 24%,rgba(229,229,229,0.8) 81%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0.5) 24%,rgba(229,229,229,0.8) 81%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,0.5) 24%,rgba(229,229,229,0.8) 81%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#cce5e5e5',GradientType=0 ); /* IE6-9 */
+	color: #bbb;
+
+	/* transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover {
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0.8) 8%, rgba(229,229,229,0.8) 92%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(8%,rgba(255,255,255,0.8)), color-stop(92%,rgba(229,229,229,0.8))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0.8) 8%,rgba(229,229,229,0.8) 92%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,0.8) 8%,rgba(229,229,229,0.8) 92%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,0.8) 8%,rgba(229,229,229,0.8) 92%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0.8) 8%,rgba(229,229,229,0.8) 92%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', endColorstr='#cce5e5e5',GradientType=0 ); /* IE6-9 */
+	color: #000;
+}
+.camframe{
+	border: 3px ridge silver;
+	border-spacing: 1px;
+	border-collapse:separate;
+	padding:0px;
+}
+#modal-Ques {
+	width: 50% ;
+	margin: 0 ;
+	padding: 10px 20px ;
+	border: 2px solid #aaa ;
+	background: #fff ;
+	position: fixed ;
+	display: none ;
+	z-index: 2 ;
+}
+  
+#modal-overlay {
+	z-index: 1 ;
+	display: none ;
+	position: fixed ;
+	top: 0 ;
+	left: 0 ;
+	width: 100% ;
+	height: 120% ;
+	background-color: rgba( 0,0,0, 0.75 ) ;
+}
+
+.button-link {
+	color: #00f ;
+	text-decoration: underline ;
+}
+ 
+.button-link:hover {
+	cursor: pointer ;
+	color: #f00 ;
+}

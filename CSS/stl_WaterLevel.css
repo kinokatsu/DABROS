@@ -1,0 +1,379 @@
+﻿/*水位観測情報 メインページ用*/
+body {
+	margin:0px;
+	-webkit-overflow-scrolling: touch;
+	font-family:'メイリオ',
+		'Meiryo',
+		'Hiragino Kaku Gothic Pro',
+		'ヒラギノ角ゴ Pro W3',
+		'Hiragino Kaku Gothic Pro',
+		'Osaka',
+		'ＭＳ Ｐゴシック',
+		sans-serif;
+		-webkit-overflow-scrolling: touch;
+	}
+@media print {
+	body {
+		/*-webkit-print-color-adjust: exact;*/
+	}
+}
+/*--------矢印要素基本---------*/
+.liSet {
+	display:inline-block;
+	Position:absolute;
+	z-index:10;
+	margin:0px;
+	transition: all 1s ease-in-out;
+	content:"";
+	width:0;
+	height:0;
+	border:8px solid transparent;
+	left:14.4px;
+	top:-5px;
+	-webkit-filter: drop-shadow(0px 0px 1px rgba(0,0,0,1));
+	filter: drop-shadow(0px 0px 1px 1px rgba(0,66,132,1));
+	/*--------Widthを大きくすると横に長くなる---------*/
+	border-left-style: solid;
+	border-left-width:23px;
+	cursor:default;
+}
+.liSet:after {
+  content: "";
+  position:absolute;
+  top:-8px;
+  right:23px;
+  width:0;
+  height:0;
+  border-style: solid;
+  border-width:  8px 5px 8px 0;
+}
+/*--------矢印色-Lv0 大きくすると横に長くなる---------*/
+.arr0{
+	border-left-color: var(--Lv0Ar) !important;     	/*rgba(0,128,255,0.9)*/
+}
+.arr0:after{
+	border-color: Transparent var(--Lv0Ar) Transparent Transparent;
+}
+/*--------矢印色-Lv1-----*/
+.arr1 {
+	border-left-color: var(--Lv1Ar) !important;
+}
+.arr1:after{
+	border-color: Transparent var(--Lv1Ar) Transparent Transparent;
+}
+
+@media all and (-ms-high-contrast:none) {
+	/*--------矢印色-Lv1-----*/
+	.arr1 {
+		border-left-color: Blue !important;     	/*rgba(0,128,255,0.9)*/
+	}
+	.arr1:after{
+		border-color: Transparent Blue Transparent Transparent;
+	}    	
+}
+/*--------矢印色-Lv2-----*/
+.arr2 {
+	border-left-color: var(--Lv2Ar) !important;
+}
+.arr2:after{
+	border-color: Transparent var(--Lv2Ar) Transparent Transparent;
+}
+/*--------矢印色-Lv3-----*/
+.arr3 {
+	border-left-color: var(--Lv3Ar) !important;
+}
+.arr3:after{
+	border-color: Transparent var(--Lv3Ar) transparent transparent;
+}
+/*--------矢印色-Lv4-----*/
+.arr4 {
+	border-left-color: var(--Lv4Ar) !important;
+}
+.arr4:after{
+	border-color: Transparent var(--Lv4Ar) transparent transparent;
+}
+/*--------水平矢印---------指定不要(無指定と同じ)*/
+.arrNor {
+	transform: rotate(0deg);
+}
+/*--------右上矢印---------*/
+.arrUp {
+	transform: rotate(-30deg);
+}
+/*--------右下矢印---------*/
+.arrDown {
+	transform: rotate(30deg);
+}
+/*--------地図画像---------*/
+.areamap {
+	margin:0px;
+	padding:0px;
+	border:none;
+	z-index:0;
+	cursor: default;
+	_margin-top:5px;		/*IE6*/
+	_margin-right:3px;		/*IE6*/
+	_margin-bottom:0px;		/*IE6*/
+	_margin-left:3px;		/*IE6*/
+	_position: absolute;	/*IE6*/	
+	/*cursor:-moz-grab;
+	cursor:-webkit-grab;
+	cursor:-moz-grabbing;
+	cursor:-webkit-grabbing*/
+}
+/*--------地図図面枠-------*/
+.maparea {
+	width : 100%;
+	height : 100%;
+	overflow:scroll;
+	border:none;
+	position: relative;
+	background-color:#C1DBFF;
+}
+/*-------地図内枠--------*/
+.inmap {
+	width : 100%;
+	height : 100%;
+	margin:0px;
+	padding:0px;
+	border:none;
+	transition: all 1s ease-in-out;
+	border:none;
+	background-color:#C1DBFF;
+}
+/*--------カスタムスクロールバー---------*/
+div::-webkit-scrollbar {
+	width: 14px;
+	background-color:white;
+}
+ div::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,255,0.3);
+	border-radius: 2px;
+}
+ div::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,255,0.5);
+}
+/*--------ヘッダ枠---------*/
+/*.header{
+	margin:0px;
+	width: 100%;
+	height: 100px;
+}*/
+/*--------メインコンテンツ枠---------*/
+/*.mainbox{
+	width : 800px;
+}*/
+/*--------システムタイトル枠---------*/
+/*.sttlbox {
+	width:100%;
+	background-color:#0000cd;
+	border-top :solid 5px #d9ffff;
+	height:46px;
+}*/
+/*--------システムタイトル枠---------*/
+/*.systitle {
+	font-size:16pt;
+	font-weight: bold;
+	color:#FFFFFF;
+	text-shadow: 1px 1px 2px;
+	padding:10px 40px 4px 40px;
+	background-color:#0000cd;
+}*/
+/*--------警戒ボックス---------*/
+/*.alertlabel {
+	border:none;
+	color:#d9ffff;
+	vertical-align:bottom;
+	margin-top:17px;
+	padding-left:100px;
+}*/
+/*--------警戒状態---------*/
+/*.alert {
+	border:none;
+	color:#000000;
+	  background-color:#d9ffff;
+	vertical-align:bottom;
+	text-align:center;
+	width:100px;
+	margin-top:17px;
+	background-color:red;
+	font-weight:bold;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}*/
+/*--------県名---------*/
+/*.pref{
+	font-size:20pt;
+}
+.floatL {
+	float:left;
+}
+.floatR {
+	float:right;
+}
+.floatClear {
+	clear:both;
+}*/
+/*.labelH {
+	line-height:40px;
+}*/
+/*--------県名枠---------*/
+/*.prefbox{
+	height:40px;
+	width:250px;
+	border-left :solid 10px #0000cd;
+	border-bottom: solid 1px gray;
+}*/
+.textbottom {
+	vertical-align:text-bottom;
+}
+/*.textpadL {
+	padding-left:8px;
+}*/
+/*--------拡大・縮小 ボタン---------*/
+.btn {
+	display: inline-block;
+	margin-left:3px;
+	padding: 0.1em 0.3em;
+	text-decoration: none;
+	color: #67c5ff;
+	border: solid 2px #67c5ff;
+	border-radius: 3px;
+	transition: .4s;
+	font-size:10pt;
+}
+.btn:hover {
+	background: #67c5ff;
+	color: white;
+}
+/* 会話吹き出しテスト */
+#talkbubble {
+   width: 120px;
+   height: 80px;
+   background: #81C7D4;
+   position: relative;
+   -moz-border-radius:    10px;
+   -webkit-border-radius: 10px;
+   border-radius:         8px;
+   padding:8px;
+   top:100px;
+   left:100px;
+}
+#talkbubble:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 26px;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 26px solid #81C7D4;
+   border-bottom: 13px solid transparent;
+}
+
+/*jQuery ToolTip IoT水位計トップページ用*/
+/*== 共通部分 ==*/
+.tippy-tooltip.WLCommon-theme {
+	text-align:left;
+	width: auto;
+	padding: 8px;
+	font-size:10pt;
+	/* ▼角丸 */
+	/*border-right: 1px solid #0000ea;
+	border-bottom: 1px solid #0000ea;*/
+	/*color: lighten(#ffe30e,30%);                30%明るい色*/
+	-webkit-border-radius: 5px;                     /* Chrome,Safari */
+	-moz-border-radius: 5px;                        /* Firefox */
+	border-radius: 5px;                             /* CSS3 */
+	-moz-box-shadow: 3px -3px 6px #444;			/* Firefox用*/
+	-webkit-box-shadow: 2px 2px 6px #444;		    /*Safari,Google Chrome用*/
+	box-shadow: #444 2px -2px 6px, #444;			/* 10 10 30 */
+	word-break:keep-all;	
+}
+
+.tippy-tooltip.tooltipWL0-theme {
+	background-color: var(--Lv0Bg) !important;      /*ここが裏の背景色*/
+	border:3px solid var(--Lv0Fc);
+	color: var(--Lv0Fc);
+}
+.tippy-tooltip.tooltipWL1-theme {
+	background-color: var(--Lv1Bg) !important;
+	border:3px solid var(--Lv1Fc);
+	color: var(--Lv1Fc);           
+}
+.tippy-tooltip.tooltipWL2-theme {
+	background-color: var(--Lv2Bg) !important;
+	border:3px solid var(--Lv2Fc);
+	color: var(--Lv2Fc);           
+}
+.tippy-tooltip.tooltipWL3-theme {
+	background-color: var(--Lv3Bg) !important;
+	border:3px solid var(--Lv3Fc);
+	color: var(--Lv3Fc);
+}
+.tippy-tooltip.tooltipWL4-theme {
+	background-color: var(--Lv4Bg);
+	border:3px solid var(--Lv4Fc);
+	color: var(--Lv4Fc);
+}
+/*== backdrop部 ここが最終的に前面にでる背景色==*/
+/*.tippy-tooltip.tooltipWL1-theme .tippy-backdrop {
+	background-color: var(--level1Fr-bg);
+}
+.tippy-tooltip.tooltipWL2-theme .tippy-backdrop {
+	background-color: var(--level2Fr-bg);
+}
+.tippy-tooltip.tooltipWL3-theme .tippy-backdrop {
+	background-color: var(--level3Fr-bg);
+}
+.tippy-tooltip.tooltipWL4-theme .tippy-backdrop {
+	background-color: var(--level4Fr-bg);
+}*/
+
+.enlarge {
+	font-size: 10pt;
+	float:right;
+	color:White;
+	width: 110px;
+	height:21px;
+	vertical-align: middle;
+}
+.enlargeExp{
+	float:left;
+	line-height: 25px;
+	vertical-align: middle;
+}
+.sliderSet
+{
+	float:left;    
+	margin-left:5px;
+}
+.alertstatus{
+	position:fixed;
+	top:70px;
+	right:16px;
+	background-color:rgba(255,181,181,0.7);
+	color:Black;
+	text-align: left;
+	width: auto;
+	height: auto;
+	font-size: 12pt;
+	padding: 10px;
+}
+
+/*.right{
+	background:
+	  linear-gradient(to bottom left, rgba(255,255,255,0) 50%, #f00 50.5%) no-repeat top left/100% 50%,
+	  linear-gradient(to top left, rgba(255,255,255,0) 50%, #f00 50.5%) no-repeat bottom right/100% 50%;
+	display:inline-block;
+	Position:absolute;
+	z-index:10;
+	margin:0px;
+	transition: all 1s ease-in-out;
+	content:"";
+	width:10;
+	height:30;
+	border:8px solid transparent;
+}*/

@@ -1,0 +1,299 @@
+﻿body
+{
+	font-size: 12pt;
+	direction: ltr;
+	background-color: #e6e6e6;
+	text-decoration: none;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family:'メイリオ',
+			'Meiryo',
+			'Hiragino Kaku Gothic Pro',
+			'ヒラギノ角ゴ Pro W3',
+			'Hiragino Kaku Gothic Pro',
+			'Osaka',
+			'ＭＳ Ｐゴシック',
+			sans-serif;
+}
+
+.paper {
+	background-color:white;
+	width:80%;
+	min-width:600px;
+	margin: 20px auto 20px auto;
+	padding: 30px 50px 30px 50px;
+	box-shadow: 0 0 15px rgba(0,0,0,.3);
+}
+
+.formTitle {
+	color:#0067ce;
+	font-size:x-large;
+	margin: 20px auto 30px auto;
+	text-align:center;
+	width:65%;
+	min-width:520px;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+	background: linear-gradient(transparent 80%, #ff99ff 70%);
+	background : -webkit-gradient(linear, left top, left bottom, from(transparent), to(#77bbff));
+	background : -webkit-linear-gradient( top, transparent 70%, #77bbff);
+	background : linear-gradient(to bottom, transparent 60%, #77bbff);
+	letter-spacing: -0.05em;
+	line-height: 1;
+	-webkit-box-reflect: below 0 -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(0.4, transparent), to(rgba(0,0,0,0.5)));
+}
+
+div#exp{
+	margin:auto;
+	width:90%;
+	white-space:normal;
+}
+
+div.Items{
+	background-color:#f7f7ff;
+	margin:20px auto 0px auto;
+	border-color:#CCCCCC;
+	border-style:ridge;
+	border-top-width:2px;
+	border-left-width:2px;
+	border-right-width:2px;
+	border-bottom-width:2px;
+	padding:5px 0px 5px 0px;
+	width:100%;
+	min-width:550px;
+	/* ▼角丸 */
+	-webkit-border-radius: 5px; /* Chrome,Safari */
+	-moz-border-radius: 5px;    /* Firefox */
+	border-radius: 5px;         /* CSS3 */
+	/* ▼背景グラデーション */
+	background: -webkit-linear-gradient(top, #e0ebf6 0%, #fcfdfe 48%, #DCE8F5 49%, #DCE8F5 82%, #f2f6fb 100%);
+	background: -moz-linear-gradient(top, #e0ebf6 0%, #fcfdfe 48%, #DCE8F5 49%, #DCE8F5 82%, #f2f6fb 100%);
+	background: -o-linear-gradient(top, #e0ebf6 0%, #fcfdfe 48%, #DCE8F5 49%, #DCE8F5 82%, #f2f6fb 100%);
+	background: linear-gradient(top, #e0ebf6 0%, #fcfdfe 48%, #DCE8F5 49%, #DCE8F5 82%, #f2f6fb 100%);
+}
+
+div.Title{
+	margin-left:5px;	
+	color:#0000ff;
+}
+
+div.supplementation{
+	margin-left:20px;
+	font-size:12px;
+}
+
+div#Performance ,#Reliability ,#Operability ,#Establish ,#Salesman ,#Service ,#Price ,#Overall
+{
+	margin-top:10px;
+	margin-left:35px;	
+}
+
+.FeedbackText{
+	border-color:#CCCCCC;
+	border-style:ridge;
+	border-top:3px;
+	border-left:3px;
+	border-right:3px;
+	border-bottom:3px;
+	font-size:12px;
+	padding:3px,3px,3px,3px;	
+	height:120px;
+	margin-left:20px;
+	margin-bottom:10px;
+	vertical-align:text-top;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;	
+}
+
+div#No10{
+	height:150px;
+}
+
+a:link{
+	color: #FFFFFF;
+	font-size: 16px; 
+	font-weight: normal; 
+	padding: 7px 12px 6px 12px;
+	/* ▼表示形態 */
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: 1.1;
+	/* ▼サイズ */
+	width: 80px;
+	/* ▼余白 */
+	margin:  0.2em auto 10px auto;
+	/* ▼枠線 */
+	border-style: solid;
+	border-width: 1px;
+	border-color: #ccc #999 #999 #ccc;
+	/* ▼角丸 */
+	-webkit-border-radius: 5px; /* Chrome,Safari */
+	-moz-border-radius: 5px;    /* Firefox */
+	border-radius: 5px;         /* CSS3 */
+	/* ▼文字装飾 */
+	text-decoration: none;
+	/* ▼文字位置 */
+	text-align: center;
+	/* ▼背景グラデーション */
+	background-color: #56A9F7;
+	background: -webkit-linear-gradient(top, #5babf7 0%, #8bbceb 48%, #56A9F7 49%, #56A9F7 82%, #71b7f8 100%);
+	background: -moz-linear-gradient(top, #5babf7 0%, #8bbceb 48%, #56A9F7 49%, #56A9F7 82%, #71b7f8 100%);
+	background: -o-linear-gradient(top, #5babf7 0%, #8bbceb 48%, #56A9F7 49%, #56A9F7 82%, #71b7f8 100%);
+	background: linear-gradient(top, #5babf7 0%, #8bbceb 48%, #56A9F7 49%, #56A9F7 82%, #71b7f8 100%);
+	/* ▼文字影 */
+	-webkit-text-shadow: 1px 1px 1px #0a77dd;
+	-moz-text-shadow: 1px 1px 1px #0a77dd;
+	-o-text-shadow: 1px 1px 1px #0a77dd;
+	text-shadow: 1px 1px 1px #0a77dd;
+	/* ▼ボタン影 */
+	-webkit-box-shadow: inset 0 0 1px 1px #90c7fa, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: inset 0 0 1px 1px #90c7fa, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0 0 1px 1px #90c7fa, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+	outline: none;
+}
+a:hover {
+	color: #FFFFFF;
+	background-color: #65b0f8;
+	background: -webkit-linear-gradient(top, #6ab2f8 0%, #98c4ee 48%, #65b0f8 49%, #65b0f8 82%, #80bef9 100%);
+	background: -moz-linear-gradient(top, #6ab2f8 0%, #98c4ee 48%, #65b0f8 49%, #65b0f8 82%, #80bef9 100%);
+	background: -o-linear-gradient(top, #6ab2f8 0%, #98c4ee 48%, #65b0f8 49%, #65b0f8 82%, #80bef9 100%);
+	background: linear-gradient(top, #6ab2f8 0%, #98c4ee 48%, #65b0f8 49%, #65b0f8 82%, #80bef9 100%);
+	border-color: #789aba;
+	-webkit-box-shadow: inset 0 0 1px 1px #a9d3fb, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: inset 0 0 1px 1px #a9d3fb, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0 0 1px 1px #a9d3fb, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+
+	-webkit-text-shadow: 1px 1px 1px #0b7eec;
+	-moz-text-shadow: 1px 1px 1px #0b7eec;
+	-o-text-shadow: 1px 1px 1px #0b7eec;
+	text-shadow: 1px 1px 1px #0b7eec;
+}
+a:active{
+	color: #FFFFFF;
+	background-color: #47a2f6;
+	background: -webkit-linear-gradient(top, #3d9df6 0%, #56A9F7 100%);
+	background: -moz-linear-gradient(top, #3d9df6 0%, #56A9F7 100%);
+	background: -o-linear-gradient(top, #3d9df6 0%, #56A9F7 100%);
+	background: linear-gradient(top, #3d9df6 0%, #56A9F7 100%);
+	/*padding: 5.8px 12px 3.8px 12px;*/
+}
+
+div.thanx{
+	background-color:rgb(218,224,210);
+	font-size:18px;
+	margin:20px 0px 0px 20px;
+	line-height:200%;
+	width:80%;
+	padding:10px 10px 10px 10px;
+	/* ▼角丸 */
+	-webkit-border-radius: 5px; /* Chrome,Safari */
+	-moz-border-radius: 5px;    /* Firefox */
+	border-radius: 5px;         /* CSS3 */
+}
+
+/* ラジオボタン
+============================== */
+div.radio-group {
+	margin-bottom: 0px;
+}
+div.radio-group input {
+	/*
+	opacity: 0;
+	 filter: alpha(opacity=0);
+	*/
+}
+div.radio-group div {
+	position: relative;
+}
+div.radio-group input {
+	position: absolute;
+	left: 0px;
+	outline:none;
+}
+div.radio-group label {
+	cursor: pointer;
+	padding: 5px 10px;
+	float: left;
+	border: solid 1px #aaa;
+	margin-left: -1px;
+	background: #eee;
+	background: -moz-linear-gradient(top, #F6F6F6, #ccc);
+	background: -webkit-gradient(linear, left top, left bottom, from(#F6F6F6), to(#ccc));
+	-moz-box-shadow: 2px 2px 6px #ddd;
+	-webkit-box-shadow: 2px 2px 6px #ddd;
+	text-shadow: 1px 1px 0px #fff;
+}
+/*div.radio-group */
+label:nth-of-type(1) {
+	-webkit-border-top-left-radius: 7px;
+	-webkit-border-bottom-left-radius: 7px;
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-bottomleft: 7px;
+}
+/*div.radio-group */
+label:last-child {
+	-webkit-border-top-right-radius: 7px;
+	-webkit-border-bottom-right-radius: 7px;
+	-moz-border-radius-topright: 7px;
+	-moz-border-radius-bottomright: 7px;
+}
+div.radio-group label.checked  {
+	color: #fff;
+	color: #2d37ff;
+	font-weight:bolder;
+	background: #C3C3C3;
+	background: -moz-linear-gradient(top, #C3C3C3, #DBDBDB);
+	background: -webkit-gradient(linear, left top, left bottom, from(#C3C3C3), to(#DBDBDB));
+	-webkit-text-shadow: 1px 1px 0px #fff;
+	-moz-text-shadow: 1px 1px 0px #fff;
+	-o-text-shadow: 1px 1px 0px #fff;
+	text-shadow: 1px 1px 0px #fff;
+}
+.customer {
+	margin:5px 10px 5px 0px;
+	vertical-align:middle;
+}
+.customerName{
+	margin:0px 10px 0px 0px ;
+	text-align:center;
+	Width:150px;
+}
+ul li {
+	list-style: none;
+	vertical-align:middle;
+}
+ul label{
+	float:left;
+	margin-right:10px;
+	width:100px;
+}
+.sendbtn{
+	margin-left:150px;
+}
+.age{
+	Width:155px;
+	margin:0px 10px 0px 0px;
+}
+.RqValid{
+	font-size:11pt;
+	font-weight:bolder;
+	background-color:#ffdac8;		/*a4ffff;*/
+	border:1px solid #0000FF;
+	-webkit-border-radius: 2px; /* Chrome,Safari */
+	-moz-border-radius: 2px;    /* Firefox */
+	border-radius: 2px;         /* CSS3 */	
+	padding:2px 5px 2px 5px;
+}
+.addComment {
+	font-size:7pt;
+	padding:0px 0px 0px 3px;
+}
+.indispensable{
+	padding-top:10px;
+	margin:auto;
+	width:90%;
+	white-space:normal;
+	font-weight:bold;
+	color:blue;
+}

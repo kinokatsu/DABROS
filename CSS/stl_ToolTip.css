@@ -1,0 +1,168 @@
+﻿/*jQuery ToolTip用*/
+.tippy-tooltip.tooltip-theme {
+	text-align:left;
+	/*width: 17em;*/
+	border:3px ridge #D0D030;	/*#666;*/
+	background-color: rgba(204,204,0,0.7);  /*#cccc00;  #DC3;*/
+	color: #0011c0;
+	padding: 8px;
+	opacity: 0.8;
+	font-size:10pt;
+	/* ▼角丸 */
+	-webkit-border-radius: 5px; /* Chrome,Safari */
+	-moz-border-radius: 5px;    /* Firefox */
+	border-radius: 5px;         /* CSS3 */
+	-moz-box-shadow: 3px -3px 6px #444 ,3px 3px 6px #444,-3px 3px 6px #444,-3px -3px 6px #444;		/* Firefox用*/
+	-webkit-box-shadow: 2px -2px 6px #444 ,3px 3px 6px #444,-2px 2px 6px #444,-2px -2px 6px #444;	/*Safari,Google Chrome用*/
+	box-shadow: #444 2px -2px 6px, #444 3px 3px 6px, #444 -2px 2px 6px, #444 -2px -2px 6px;			/* 10 10 30 */
+	word-break:break-all;
+	max-width:800px;
+}
+.tippy-tooltip.tooltip-theme .tippy-backdrop {
+	background-color: rgba(255,255,204,0.7);	/*#FFFFCC;*/
+}
+#tooltip h3, #tooltip div {
+	text-align: left;
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0;
+}
+/*管理値超過センサー一覧用*/
+.tippy-tooltip.alerttip-theme {
+	color: #003737;	/*#11C;*/
+	width: 440px;	/*380px;	22em;*/
+	height:auto;
+	border:3px ridge #FF7171;	/*#666;*/
+	background-color: rgba(255,134,134,0.7);	/* #FFC8C8;	#DC3;*/
+	padding: 8px 8px 2px 8px;
+	opacity: 0.8;
+	font-size:10pt;
+	/* ▼角丸 */
+	-webkit-border-radius: 5px; /* Chrome,Safari */
+	-moz-border-radius: 5px;    /* Firefox */
+	border-radius: 5px;         /* CSS3 */
+	-moz-box-shadow: 3px -3px 6px #444 ,3px 3px 6px #444,-3px 3px 6px #444,-3px -3px 6px #444;     /* Firefox用*/
+	-webkit-box-shadow: 2px -2px 6px #444 ,3px 3px 6px #444,-2px 2px 6px #444,-2px -2px 6px #444;  /*Safari,Google Chrome用*/
+	box-shadow: #444 2px -2px 6px, #444 3px 3px 6px, #444 -2px 2px 6px, #444 -2px -2px 6px; /* 10 10 30 */
+	/*margin-bottom: 10px;*/
+	word-break:keep-all;
+}
+.tippy-tooltip.alerttip-theme .tippy-content {
+	height:100%;
+	overflow:hidden;
+}
+.tippy-tooltip.alerttip-theme .tippy-backdrop {
+	background-color: rgba(255,220,220,0.7);	/*#FFFFCC;*/
+}
+.tippy-tooltip.alerttip-theme .alertOutTable {
+	vertical-align:top;
+	border-width:0px;
+	width:100%;      /*440px;*/
+	/*float: left;*/
+	margin-top:2px;
+}
+.tippy-tooltip.alerttip-theme .alerttable {
+	max-height:85%;
+	margin-top:3px;
+}
+.tippy-tooltip.alerttip-theme dt,dt.dth,dd.col1,dd.col1h,dd.col2,dd.col2h,dd.col3,dd.col3h {
+	margin:auto;
+	float:left;
+	position:relative;
+	text-align:left;
+}
+.tippy-tooltip.alerttip-theme dt.dth,dd.col1h,dd.col2h,dd.col3h {
+	background-color:#ffdfdf;       /*#eaeaea;*/
+	/*border-bottom:1px solid #b4b4b4;*/
+}
+.tippy-tooltip.alerttip-theme dt,dt.dth {             /*計器記号*/
+	width:9em;
+	padding-left:5px;
+	padding-right:5px;
+	/*border-right:1px solid #b4b4b4;*/
+}
+.tippy-tooltip.alerttip-theme dt.dth {			        /*計器記号ヘッダ*/
+	text-align:center;
+	padding-right:5px;
+	/*border-bottom:1px solid #b4b4b4;*/
+}
+.tippy-tooltip.alerttip-theme dd.col1,dd.col1h {          /*測定値*/
+	width:80px;
+	text-align: right;
+	padding-right:5px;
+}
+.tippy-tooltip.alerttip-theme dd.col1h {		            /*測定値 ヘッダ*/
+	text-align: center;
+	/*border-right:1px solid #b4b4b4;*/
+	/*border-bottom:1px solid #b4b4b4;*/
+}
+.tippy-tooltip.alerttip-theme dd.col2,dd.col2h {        /*レベル*/
+	width:120px;
+	text-align: center;
+	padding-left:3px;
+	/*border-right:1px solid #b4b4b4;*/
+}
+/*.tippy-tooltip.alerttip-theme dd.col2h {		レベル ヘッダ
+	border-bottom:1px solid #b4b4b4;
+}*/
+.tippy-tooltip.alerttip-theme dd.col3,dd.col3h {	/*管理値*/
+	width:80px;
+	text-align: right;
+	padding-left:3px;
+	padding-right:3px;
+	/*background-color:Brown;*/
+	zoom:100%;
+}
+.tippy-tooltip.alerttip-theme dd.col3h{		/*管理値 ヘッダ*/
+	text-align: center;
+	/*border-bottom:1px solid #b4b4b4;*/
+}
+.tippy-tooltip.alerttip-theme dd.col3:after {
+	content: "";
+	clear: both;
+	height: 0;
+	display: block;
+	visibility: hidden;
+}
+.tippy-tooltip.alerttip-theme .cl {
+	clear:both;
+}
+/*jQuery ToolTip 分布図用*/
+.tippy-tooltip.tooltipdist-theme {
+	text-align:left;
+	width: auto;
+	/*border:3px ridge #D0D030;	/*#666;*/
+	background-color: rgba(183,209,245,0.7);  /*#cccc00;  #DC3;*/
+	color: #0011c0;
+	padding: 8px;
+	opacity: 0.8;
+	font-size:10pt;
+	/* ▼角丸 */
+	border-right: 1px solid #0000ea;
+	border-bottom: 1px solid #0000ea;
+	-webkit-border-radius: 5px; /* Chrome,Safari */
+	-moz-border-radius: 5px;    /* Firefox */
+	border-radius: 5px;         /* CSS3 */
+	-moz-box-shadow: 3px -3px 6px #444;			/* Firefox用*/
+	-webkit-box-shadow: 2px 2px 6px #444;		/*Safari,Google Chrome用*/
+	box-shadow: #444 2px -2px 6px, #444;			/* 10 10 30 */
+	word-break:keep-all;						/*単語の切れ目で改行*/
+}
+.tippy-tooltip.tooltipdist-theme .tippy-backdrop {
+	background-color: rgba(143,169,245,0.8);	/*#FFFFCC;*/
+}
+.tippy-roundarrow {
+	fill: rgba(183,209,245,0.8);
+}
+.tippy-tooltip.bordered-theme {
+  border: 1px solid #bfc9dc;
+  box-shadow: none !important;
+}
+.tippy-arrow {
+	width: 0;
+	height: 0;
+	border: 0 solid transparent;
+	border-top-width: 13px;
+	border-bottom-width: 13px;
+	border-right: 13px solid white;
+}

@@ -1,0 +1,67 @@
+﻿body
+{
+	font-size: 12pt;
+	direction: ltr;
+	background-color: #e6e6e6;
+	text-decoration: none;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family:'メイリオ',
+			'Meiryo',
+			'Hiragino Kaku Gothic Pro',
+			'ヒラギノ角ゴ Pro W3',
+			'Hiragino Kaku Gothic Pro',
+			'Osaka',
+			'ＭＳ Ｐゴシック',
+			sans-serif;
+}
+div{
+	outline: none 0px;
+	margin:auto;
+}
+.paper {
+	background-color:white;
+	width:80%;
+	min-width:600px;
+	max-width:700px;
+	margin: 20px auto 20px auto;
+	padding: 30px 50px 30px 50px;
+	box-shadow: 0 0 15px rgba(0,0,0,.3);
+}
+
+/* 印刷時に使用されるスタイル */
+@media print {
+.noprint {visibility:hidden;}
+.dspOnly {display:none;}
+.marg {margin-left: 10px;
+	   margin-top: 8px;}
+}
+.formTitle {
+	color:#0067ce;
+	font-size:x-large;
+	margin: 20px auto 30px auto;
+	text-align:center;
+	width:40%;
+	min-width:200px;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+	background: linear-gradient(transparent 80%, #ff99ff 70%);
+	background : -webkit-gradient(linear, left top, left bottom, from(transparent), to(#77bbff));
+	background : -webkit-linear-gradient( top, transparent 70%, #77bbff);
+	background : linear-gradient(to bottom, transparent 60%, #77bbff);
+	letter-spacing: -0.05em;
+	line-height: 1;
+	-webkit-box-reflect: below 0 -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(0.4, transparent), to(rgba(0,0,0,0.5)));
+}
+.listitem {
+	margin:20px auto 20px 30px;
+	width:85%;
+	word-spacing: normal;
+	word-break : break-all;
+	overflow-wrap: break-word;
+}
+li {
+	padding:10px 0px 10px 0px;
+}
+.declaration {
+	width: 90%;
+}

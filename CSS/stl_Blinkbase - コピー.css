@@ -1,0 +1,14 @@
+﻿.blinkNo@@NO {
+background-color: @@ALT;
+animation: bg-color@@NO 1100ms ease 300ms infinite;
+-webkit-animation: bg-color@@NO 1100ms ease 300ms infinite;}
+@-webkit-keyframes bg-color@@NO{
+0% {background-color:@@ALT;}
+/*50% {background-color:@@NOR;}*/
+50% {background-color:#FFFFFF;}
+100% {background-color:@@ALT;}}
+@keyframes bg-color@@NO{
+0% {background-color:@@ALT;}
+/*50% {background-color:@@NOR;}*/
+50% {background-color:#FFFFFF;}
+100% {background-color:@@ALT;}}
